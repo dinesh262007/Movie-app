@@ -1,0 +1,150 @@
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.movie-card {
+  width: 200px;
+  padding: 0.5rem;
+  border-radius: 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.movie-card h3 {
+  margin: 0.5rem 0 0.2rem;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.movie-card p {
+  margin: 0;
+  color: #ccc;
+}
+
+.rating-circle {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #0f1111;
+  color: #fff;
+  padding: 0.4rem 0.7rem;
+  border-radius: 50%;
+  backdrop-filter: blur(5px);
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* === Movie Detail Page Styles === */
+.movie-detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto; /* Top and bottom spacing from navbar/footer */
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+/* Poster Section */
+.movie-detail img {
+  width: 300px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Info Section */
+.movie-detail-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2rem; /* Reduced spacing between lines */
+}
+
+
+.movie-detail h1 {
+  margin: 0.5rem 0;
+}
+
+.movie-detail p {
+  font-size: 1rem;
+  color: white;
+  line-height: 1.4; /* Reduced from 1.6 */
+  margin: 0.2rem 0;  /* Add this to override default spacing */
+}
+
+.movie-detail p strong {
+  font-weight: 600; /* Slightly bolder than default */
+  color: #fff;       /* Brighter white for contrast */
+  font-size: 1.05rem; /* Slight increase in size */
+ /* Optional: for bold appearance */
+     /* Optional: more modern spacing */
+}
+
+.page-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* Responsive: Stack vertically on small screens */
+@media (max-width: 768px) {
+  .movie-card {
+    width: 45%;
+  }
+
+  .movie-detail {
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 1rem;
+  }
+
+  .movie-detail img {
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 1rem;
+  }
+
+  .movie-detail-info {
+    text-align: center;
+  }
+}
+
+@media(max-width:480px){
+  .movie-card {
+    width: 90%;
+  }
+
+  .movie-detail {
+    padding: 1rem;
+  }
+
+  .movie-detail img {
+    width: 100%;
+    max-width: 250px;
+  }
+}
